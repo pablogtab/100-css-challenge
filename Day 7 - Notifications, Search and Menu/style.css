@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700');
+
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #264057;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border-radius: 5px;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.notifications-container {
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 5px 5px 16px -1px rgba(0, 0, 0, 0.63);
+  -webkit-box-shadow: 5px 5px 16px -1px rgba(0, 0, 0, 0.63);
+  -moz-box-shadow: 5px 5px 16px -1px rgba(0, 0, 0, 0.63);
+  overflow: hidden;
+  transform: translateX(0%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.notifications-active {
+  transform: translateX(50%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.menu {
+  top: 20px;
+  position: absolute;
+  width: 150px;
+  height: 260px;
+  padding: 10px 0;
+  background-color: #43627D;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 3px;
+  box-shadow: 5px 5px 16px -1px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 5px 5px 16px -1px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 5px 5px 16px -1px rgba(0, 0, 0, 0.4);
+  transform: translateX(30%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.menu-active {
+  transform: translateX(10%);
+  transition: transform 0.5s ease-in-out;
+}
+
+
+
+.option {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-left: 10%;
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: #385269;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.option p {
+  color: #93B2CD;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.option:hover p {
+
+  color: white;
+  transition: color 0.2s ease-in-out;
+}
+
+.icon {
+  color: #93B2CD;
+  transition: color 0.2s ease-in-out;
+  margin-right: 8px;
+}
+
+.option:hover .icon {
+  color: white;
+  transition: color 0.2s ease-in-out;
+}
+
+
+
+.notifications-header {
+  width: 100%;
+  height: 22.5%;
+  background-color: #5F98CD;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 3px 3px 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.my-icon {
+  margin-top: -10px;
+  width: 20px;
+  height: 20px;
+  transform: scale(1.1);
+}
+
+.icon-search {
+  color: #B2DAFF;
+  transition: color 0.2s ease-in-out;
+}
+
+.icon-search:hover {
+  color: white;
+  border-radius: 50%;
+  transition: color 0.2s ease-in-out;
+}
+
+.icono-menu {
+  position: relative;
+  width: 30px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+
+.dash {
+  height: 2.5px;
+  border-radius: 3px;
+  width: 100%;
+  background-color: #B2DAFF;
+  transition: background-color 0.2s ease-in-out;
+}
+
+
+.icono-menu:hover .dash {
+  background-color: white;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.icono-menu:hover .dash-dot {
+  background-color: white;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.icono-menu:hover .dash-dot::before {
+  background-color: white;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.dash-dot {
+  width: 70%;
+  background-color: #B2DAFF;
+  transition: background-color 0.2s ease-in-out;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.dash-dot::before {
+  content: '';
+  position: absolute;
+  top: 2.5px;
+  right: 0;
+  margin: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #B2DAFF;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.header-text {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0
+}
+
+.posts-container {
+  position: relative;
+  width: 77.5%;
+  height: 67.5%;
+  padding-left: 15%;
+  padding-right: 7.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.posts-container .line {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 2.5px;
+  height: 100%;
+  background-color: #EBEBEB;
+  transform: translateX(-50%);
+}
+
+.notification-text {
+  font-size: 14px;
+  font-weight: 400;
+  color: #666666;
+}
+
+.notification .name {
+  font-weight: 600;
+  color: #666666;
+}
+
+.notification .hour {
+  font-size: 10px;
+  color: #666666;
+}
+
+.notification {
+  opacity: 0;
+  position: relative;
+}
+
+.fade-1 {
+  animation: fadein-animation 0.4s ease-in-out normal forwards;
+  animation-delay: 0.2s;
+}
+
+.fade-2 {
+  animation: fadein-animation 0.4s ease-in-out forwards;
+  animation-delay: 0.4s;
+}
+
+.fade-3 {
+  animation: fadein-animation 0.4s ease-in-out forwards;
+  animation-delay: 0.6s;
+}
+
+
+
+@keyframes fadein-animation {
+
+
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+
+
+
+
+
+
+.circle-container {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 0.5px;
+  left: -21.5px;
+  background-color: white;
+  padding: 2px;
+
+}
+
+.circle-container .circle {
+  border-radius: 50%;
+  border: 2px solid #5F98CD;
+  width: 6px;
+  height: 6px;
+}
+
+.notification:hover .notification-text {
+  color: #5F98CD;
+  cursor: pointer;
+}
+
+.notification:hover .name {
+  color: #5F98CD;
+  cursor: pointer;
+}
+
+.search-bar {
+  position: absolute;
+  width: 75%;
+  height: 12%;
+  background-color: white;
+  border-radius: 20px;
+  z-index: 2;
+  left: 4%;
+}
+
+.search-bar {
+  position: absolute;
+  width: 70%;
+  height: 12%;
+  border-radius: 20px;
+  margin-top: 1px;
+  padding-top: 2px;
+  padding-left: 7.5%;
+  font-size: 12px;
+  font-weight: 400;
+  border: none;
+  color: #666666;
+  background-color: white;
+  opacity: 1;
+}
+
+.search-bar {
+  visibility: hidden;
+  position: absolute;
+  width: 70%;
+  height: 12%;
+  border-radius: 20px;
+  margin-top: 1px;
+  padding-top: 2px;
+  padding-left: 7.5%;
+  font-size: 12px;
+  font-weight: 400;
+  border: none;
+  color: #666666;
+  background-color: white;
+  opacity: 0;
+  left: 8%;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease, left 0.3s ease;
+}
+
+
+.search-bar-show {
+  visibility: visible;
+  opacity: 1;
+  left: 5%;
+  transition: opacity 0.3s ease-in-out, left 0.3s ease;
+}
+
+.search-bar:focus {
+  outline: none;
+}

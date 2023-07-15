@@ -1,0 +1,107 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 5px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.floor {
+  background-color: #232323;
+  height: 40%;
+  width: 100%;
+  position: absolute;
+  bottom: 0
+}
+
+.boots-container {
+  position: relative;
+  background-color: #f6e8d7;
+  width: 100%;
+  height: 60%;
+
+}
+
+.boot {
+  margin-top: 55px;
+  width: 152px;
+  height: 128px;
+  background: url(https://100dayscss.com/codepen/doc-martens.svg);
+  position: absolute;
+}
+
+.leg-1 {
+  animation: step 2s ease-in-out infinite, appear 1s ease-out 1s forwards
+}
+
+.leg-2 {
+  animation: step 2s ease-in-out 1s infinite, appear 1s ease-out 1s forwards
+}
+
+.leg {
+  opacity: 0;
+  width: 40%;
+  height: 80%;
+  position: absolute;
+}
+
+.boot-1 {
+  animation: boot-step 2s ease-in-out infinite, appear 1s ease-out 1s forwards
+}
+
+.boot-2 {
+  animation: boot-step 2s ease-in-out 1s infinite, appear 1s ease-out 1s forwards
+}
+
+
+@keyframes step {
+
+  0%,
+  100% {
+    transform: translate(140%, 20%)rotate(-22deg)
+  }
+
+  50% {
+    transform: translate(20%, 20%)rotate(40deg)
+  }
+}
+
+@keyframes boot-step {
+
+  0%,
+  100% {
+    transform: translate(0%, 0%)rotate(0deg)
+  }
+
+  15% {
+    transform: translate(0%, 15%)rotate(10deg)
+  }
+
+  50% {
+    transform: translate(0%, 15%)rotate(10deg)
+  }
+
+  70%{
+    transform: translate(0%, -10%)rotate(10deg)
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}

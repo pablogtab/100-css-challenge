@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="frame">
+        <div class="center">
+            <div class="menu" id="menu">
+                <div class="option">
+                    <i class="icon icon-dashboard"></i>
+                    <p>Dashboard</p>
+                </div>
+                <div class="option">
+                    <i class="icon icon-user"></i>
+                    <p>Profile</p>
+                </div>
+                <div class="option">
+                    <i class="icon icon-bell"></i>
+                    <p>Notifications</p>
+                </div>
+                <div class="option">
+                    <i class="icon icon-comment"></i>
+                    <p>Messages</p>
+                </div>
+                <div class="option">
+                    <i class="icon icon-gear"></i>
+                    <p>Settings</p>
+                </div>
+            </div>
+            <div class="notifications-container" id="notifications">
+                <div class="notifications-header">
+                    <input id="search-bar" class="search-bar" type="text" placeholder="Search ..." />
+                    <div class="icono-menu"
+                        onclick="document.getElementById('notifications').classList.toggle('notifications-active');document.getElementById('menu').classList.toggle('menu-active')">
+                        <div class="dash dash-dot"></div>
+                        <div class="dash"></div>
+                    </div>
+                    <p class="header-text">Notifications</p>
+                    <div class="my-icon"
+                        onclick="document.getElementById('search-bar').classList.toggle('search-bar-show')"><i
+                            class=" icon-search"></i> </div>
+                </div>
+                <div class="posts-container">
+                    <div class="line"></div>
+                    <div class="notification fade-1">
+                        <div class="circle-container">
+                            <div class="circle"></div>
+                        </div>
+                        <p class="notification-text hour">9:24 AM</p>
+                        <p class="notification-text"><span class="name">John Walker</span> posted a photo on your wall.
+                        </p>
+                    </div>
+                    <div class="notification fade-2">
+                        <div class="circle-container">
+                            <div class="circle"></div>
+                        </div>
+                        <p class="notification-text hour">8:19 AM</p>
+                        <p class="notification-text"><span class="name">Alice Parker</span> commented your last post.
+                        </p>
+                    </div>
+                    <div class="notification fade-3">
+                        <div class="circle-container">
+                            <div class="circle"></div>
+                        </div>
+                        <p class="notification-text hour">Yesterday</p>
+                        <p class="notification-text"><span class="name">Luke Wayne</span> added you as friend.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

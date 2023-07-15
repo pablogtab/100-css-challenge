@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700');
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+}
+
+
+.image {
+  position: relative;
+  background-color: black;
+  width: 48.5%;
+  height: 48.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.image:hover img {
+  opacity: 0.7;
+  transition: opacity 0.25s ease-in;
+}
+
+.circle {
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  z-index: 1;
+  background-color: #EC6565;
+  opacity: 0;
+  transition: all 0.3s ease-in
+}
+
+.image:hover .circle {
+  opacity: 1;
+  transform: scale(50%);
+  transition: opacity tranform ease-in 0.3s;
+}
+
+.circle::before {
+  content: '';
+  background-color: white;
+  position: absolute;
+  width: 35px;
+  height: 7px;
+  transform: translate(41.5px, 54px)
+}
+
+
+.circle::after {
+  content: '';
+  background-color: white;
+  position: absolute;
+  width: 35px;
+  height: 7px;
+  transform: translate(41.5px, 54px) rotate(-90deg)
+}
+
+.circle:hover {
+  border: 1px solid white;
+}
+
+.user {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+
+.background-img {
+  background-color: transparent;
+  width: 100%;
+  height: 45%;
+  position: absolute;
+  z-index: 5;
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.background-flat {
+  background-color: #EC6565;
+  width: 100%;
+  height: 55%;
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
+  transform: translateY(100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.background-active {
+  transform: translateY(0%);
+  transition: transform 1s ease-in-out;
+}
+
+.close-circle {
+  position: absolute;
+  z-index: 10;
+  top: 10px;
+  right: 10px;
+  opacity: 1;
+  width: 60px;
+  height: 60px;
+  background-color: #EC6565;
+  border-radius: 50%;
+  transform: translateY(-150%);
+  transition: transform 1s ease-in-out;
+}
+
+.close-circle-active {
+  transform: translateY(0%);
+  transition: transform 0.5s ease-in-out 0.5s;
+}
+
+
+
+.close-circle::before {
+  content: '';
+  background-color: white;
+  position: absolute;
+  width: 15px;
+  height: 3px;
+  transform: translate(23px, 29px) rotate(45deg)
+}
+
+
+.close-circle::after {
+  content: '';
+  background-color: white;
+  position: absolute;
+  width: 15px;
+  height: 3px;
+  transform: translate(23px, 29px) rotate(-45deg)
+}
+
+.close-circle:hover {
+  background-color: white;
+  transition: all 0.5s ease
+}
+
+.close-circle:hover::before {
+  background-color: #EC6565;
+  transition: all 0.5s ease
+}
+
+.close-circle:hover::after {
+  background-color: #EC6565;
+  transition: all 0.5s ease
+}
+
+.profile-picture {
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  border-radius: 50%;
+  overflow: hidden;
+  transform: translateY(-120%);
+  border: 2px solid white;
+  z-index: 10;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in
+}
+
+.profile-picture-active {
+  transform: translateY(120%);
+  transition: transform 0.8s ease 0.5s
+}
+
+.name {
+  margin-top: 70px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+}
+
+
+.picture-image {
+  width: 100%;
+}
+
+.circle-container {
+  margin-top:30px;
+  margin-left: 20%;
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+}
+
+.circle-profile {
+  display:flex;
+  border-radius: 50%;
+  background-color: #EC6565;
+  width: 45px;
+  height: 45px;
+  border: 1.5px solid white;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.circle-profile:hover{
+  background-color: white;
+  transition: all 0.5s ease;
+}
+
+.circle-profile:hover .icon{
+  color: #EC6565;
+  transition: all 0.5s ease;
+}
+
+.icon{
+  color:white;
+  transform: scale(1.2);
+}

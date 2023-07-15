@@ -1,0 +1,207 @@
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: #272C34;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    border-radius: 5px;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 44%;
+    height: 44%;
+    border-radius: 50%;
+}
+
+.circle {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #7DDFFC;
+    overflow: hidden;
+    animation: circle-fade ease-in-out 5s infinite;
+    /* Este fue la clave para ocultar la tierra */
+}
+
+.dirt {
+    bottom: 0;
+    height: 35%;
+    width: 100%;
+    background-color: #F0DE75;
+}
+
+.pyramid-right {
+    bottom: 0;
+    height: 0;
+    width: 0;
+    border-bottom: 50px solid #F4F4F4;
+    border-right: 54px solid transparent;
+    margin-bottom: -50px;
+    margin-left: 54px;
+    animation: pyramid-color-right 5s infinite;
+}
+
+.pyramid {
+    bottom: 0;
+    height: 0;
+    width: 0;
+    border-bottom: 50px solid #F4F4F4;
+    margin-right: 54px;
+    border-left: 72px solid transparent;
+    border-right: -10px solid transparent;
+    transform: skewX(20deg);
+    animation: pyramid-color 5s infinite;
+}
+
+.sun {
+    position: absolute;
+    width: 18%;
+    height: 18%;
+    background-color: #FFEF00;
+    top: 2%;
+    left: 42.5%;
+    border-radius: 50%;
+    animation: sun-translation 5s infinite;
+}
+
+.pyramid-shadow {
+    margin-left: -20%;
+    height: 40%;
+    width: 140%;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 6px 0.5px rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: 0px 2px 6px 0.5px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0px 2px 6px 0.5px rgba(0, 0, 0, 0.8);
+    animation: pyramid-shadow ease-in-out 5s infinite;
+}
+
+@keyframes circle-fade {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    65% { opacity: 1}
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+@keyframes pyramid-shadow {
+    0% {
+        height: 0%;
+        clip-path: polygon(28% 0, 72% 0, 100% 100%);
+    }
+
+    25% {
+        height: 50%;
+        clip-path: polygon(28% 0, 72% 0, 90% 100%);
+    }
+
+    50% {
+        height: 15%;
+    }
+
+    70% {
+        height: 30%;
+        clip-path: polygon(28% 0, 72% 0, 10% 100%);
+    }
+
+    85% {
+        height: 0%;
+        clip-path: polygon(28% 0, 72% 0, 0% 100%);
+    }
+
+    100% {
+        height: 0%;
+        clip-path: polygon(28% 0, 72% 0, 0% 100%);
+    }
+}
+
+@keyframes sun-translation {
+    0% {
+        top: 35%;
+        transform: translateX(-110px);
+    }
+
+    30% {
+        top: 12%;
+        transform: translateX(-50px);
+    }
+
+    50% {
+        top: 8%;
+    }
+
+    100% {
+        top: 45%;
+        transform: translateX(110px);
+    }
+}
+
+@keyframes pyramid-color {
+    0% {
+        border-bottom-color: #f4f4f4;
+    }
+
+    15% {
+        border-bottom-color: #F4F4F4;
+    }
+
+    38% {
+        border-bottom-color: #F4F4F4;
+    }
+
+    70% {
+        border-bottom-color: #DDDDDD;
+    }
+
+    100% {
+        border-bottom-color: #DDDDDD;
+    }
+}
+
+@keyframes pyramid-color-right {
+    0% {
+        border-bottom-color: #c1c1c1;
+    }
+
+    15% {
+        border-bottom-color: #DDDDDD;
+    }
+
+    38% {
+        border-bottom-color: #DDDDDD;
+    }
+
+    70% {
+        border-bottom-color: #F4F4F4;
+    }
+
+    100% {
+        border-bottom-color: #F4F4F4;
+    }
+}

@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700');
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #4B4841;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.flipper {
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  perspective: 1000px;
+}
+
+.card {
+  transform-style: preserve-3d;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #FFCE4E;
+  border-radius: 4px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.5);
+}
+
+.flipper:hover .front {
+  transform: rotateX(90deg);
+  transition: transform 0.4s ease-in
+}
+
+.flipper:hover .back {
+  transform: rotateX(0deg);
+  transition: transform 0.4s ease-out 0.4s
+}
+
+.back {
+  transform: rotateX(-90deg);
+  transition: transform 0.4s ease-in
+}
+
+.front {
+  transform: rotateX(0deg);
+  transition: transform 0.4s ease-out 0.4s
+}
+
+.bycicle {
+  width: 40%;
+  transform-origin: 50% 100%;
+  animation: bycicle 0.3s linear infinite alternate
+}
+
+.street {
+  margin-top: 135px;
+  position: absolute;
+  width: 50%;
+  height: 3px;
+  overflow: hidden;
+}
+
+
+@keyframes bycicle {
+  from {
+    transform: scaleY(100%)
+  }
+
+  to {
+    transform: scaleY(101%)
+  }
+}
+
+.street-bar {
+  height: 100%;
+  background-color: #4B4841;
+  position: absolute;
+  right: -20px;
+}
+
+
+.bar-1 {
+  width: 10%;
+  animation: street 1s linear 0.1s infinite
+}
+
+.bar-2 {
+  width: 5%;
+  animation: street 0.9s linear 0.4s infinite
+}
+
+.bar-3 {
+  width: 4%;
+  animation: street 1s linear 0.2s infinite
+}
+
+.bar-4 {
+  width: 8%;
+  animation: street 1s linear infinite
+}
+
+.bar-5 {
+  width: 3%;
+  animation: street 1s linear infinite
+}
+
+.bar-6 {
+  width: 5%;
+  animation: street 1s linear 0.3s infinite
+}
+
+.bar-7 {
+  width: 14%;
+  animation: street 1s linear 0.6s infinite
+}
+
+.bar-8 {
+  width: 15%;
+  animation: street 1s linear 0.77s infinite
+}
+
+
+
+@keyframes street {
+  from {
+    transform: translateX(0px);
+  }
+
+  to {
+    transform: translateX(-200px);
+  }
+}
+
+
+.helicopter {
+  z-index: 10;
+  margin-top: 20%;
+  position: absolute;
+  width: 40%;
+  animation: helicopter 1s ease-in-out infinite alternate
+}
+
+@keyframes helicopter {
+  from {
+    transform: translateY(10px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
+}
+
+.wind-container {
+  position: relative;
+  margin-top: 14.5%;
+  width: 50%;
+  height: 60%;
+  overflow: hidden;
+}
+
+.wind {
+  position: absolute;
+  width: 5%;
+  top: 0;
+  right: -40px;
+  background-color: #4B4841;
+  height: 3px;
+}
+
+.wind-1 {
+  width: 10%;
+  animation: street 0.8s linear infinite
+}
+
+.wind-2 {
+  top: 12px;
+  width: 10%;
+  animation: street 0.8s linear 0.2s infinite
+}
+
+.wind-3 {
+  top: 20px;
+  width: 10%;
+  animation: street 0.8s linear 0.8s infinite
+}
+
+.wind-4 {
+  top: 60px;
+  width: 10%;
+  animation: street 0.8s linear infinite
+}
+
+.wind-5 {
+  top: 90px;
+  width: 10%;
+  animation: street 0.8s linear 0.17s infinite
+}
+
+.wind-7 {
+  top: 77px;
+  width: 10%;
+  animation: street 0.8s linear 0.5s infinite
+}
+
+.wind-8 {
+  top: 125px;
+  width: 10%;
+  animation: street 0.8s linear 0.2s infinite
+}
+
+.wind-9 {
+  top: 133px;
+  width: 10%;
+  animation: street 0.8s linear 0.8s infinite
+}
+
+.wind-10 {
+  top: 100px;
+  width: 10%;
+  animation: street 0.8s linear 0.9s infinite
+}
