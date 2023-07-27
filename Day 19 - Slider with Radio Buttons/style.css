@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700');
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 175px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.circle {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.background {
+  position: absolute;
+  height: 400px;
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+  transform: translateX(0px);
+}
+
+.background-1 {
+  width: 400px;
+  height: 100%;
+  background-color: #9b59b6;
+}
+
+.background-2 {
+  width: 400px;
+  height: 100%;
+  background-color: #3498db;
+}
+
+.background-3 {
+  width: 400px;
+  height: 100%;
+  background-color: #1abc9c
+}
+
+.moving-circle {
+  border: 0px;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 5px;
+  transform: translateX(5px);
+  background-color: white;
+  cursor: auto;
+}
+
+
+.moving-circle.position-1 {
+  transform: translateX(5px);
+  transition: transform 1s ease-in-out;
+}
+
+.moving-circle.position-2 {
+  transform: translateX(67.25px);
+  transition: transform 1s ease-in-out;
+}
+
+.moving-circle.position-3 {
+  transform: translateX(130px);
+  transition: transform 1s ease-in-out;
+}
+
+.background.position-1 {
+  transform: translateX(0px);
+  transition: transform 1s ease-in-out;
+}
+
+.background.position-2 {
+  transform: translateX(-400px);
+  transition: transform 1s ease-in-out;
+}
+
+.background.position-3 {
+  transform: translateX(-800px);
+  transition: transform 1s ease-in-out;
+}

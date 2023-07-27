@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700');
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.top {
+  width: 100%;
+  height: 50%;
+  background-color: #333;
+}
+
+.bottom {
+  width: 100%;
+  height: 50%;
+  background-color: green;
+}
+
+.coin-spinning {
+  position: absolute;
+  z-index: 5;
+  height: 380px;
+  width: 420px;
+  top: 10px;
+  left: -10px;
+  border-radius: 50%;
+  background-color: transparent;
+  transform-style: preserve-3d;
+  animation: elastic 5s ease-in-out infinite;
+}
+
+.green {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform: rotateX(0deg);
+  background-color: green;
+  backface-visibility: hidden;
+}
+
+.gray {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform: rotateX(180deg);
+  background-color: #333;
+  backface-visibility: hidden;
+}
+
+@keyframes elastic {
+
+  0% {
+    transform: rotateX(90deg);
+  }
+
+  10% {
+    transform: rotateX(160deg);
+  }
+
+  15% {
+    transform: rotateX(40deg);
+  }
+
+  20% {
+    transform: rotateX(120deg);
+  }
+
+  25% {
+    transform: rotateX(50deg);
+  }
+
+  30% {
+    transform: rotateX(105deg);
+  }
+
+  35% {
+    transform: rotateX(60deg);
+  }
+
+  40% {
+    transform: rotateX(100deg);
+  }
+
+  45%,
+  55% {
+    transform: rotateX(90deg);
+  }
+
+  65% {
+    transform: rotateX(30deg);
+  }
+
+  70%{
+    transform: rotateX(150deg);
+  }
+
+  75% {
+    transform: rotateX(40deg);
+  }
+
+  80% {
+    transform: rotateX(130deg);
+  }
+
+  85% {
+    transform: rotateX(55deg);
+  }
+
+  90% {
+    transform: rotateX(125deg);
+  }
+
+  95% {
+    transform: rotateX(90deg);
+  }
+
+  100% {
+    transform: rotateX(90deg);
+  }
+
+}

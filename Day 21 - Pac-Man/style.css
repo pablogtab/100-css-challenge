@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700');
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #2C2E2E;
+  color: #2C2E2E;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.circle {
+  width: 100px;
+  height: 100px;
+}
+
+.pacman {
+  fill: none;
+  stroke: #F4D146;
+  stroke-width: 50px;
+  stroke-dasharray: 156.8;
+  transform-origin: 50px 50px;
+  transform: rotate(0deg);
+  animation: pacman-anim 0.4s ease-in-out alternate infinite;
+}
+
+@keyframes pacman-anim {
+  0% {
+    stroke-dasharray: 156.8;
+    transform: rotate(0deg);
+  }
+
+  100% {
+    stroke-dasharray: 122.2;
+    transform: rotate(40deg);
+  }
+}
+
+.eye {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  width: 20px;
+  height: 40px;
+  transform-origin: 0px 50px;
+  animation: eye-anim 0.4s ease-in-out alternate infinite
+}
+
+circle.eye {
+  fill: #2C2E2E;
+}
+
+@keyframes eye-anim {
+  0% {
+    transform: rotate(2deg);
+  }
+
+  100% {
+    transform: rotate(-2deg);
+  }
+}
+
+.balls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  top: 44px;
+  position: absolute;
+  width: 300px;
+  height: 16px;
+  padding-left: 72px;
+  animation: ball-anim 0.8s linear infinite;
+}
+
+.ball {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #F4D146;
+}
+
+@keyframes ball-anim {
+  0% {
+    transform: translateX(0)
+  }
+
+  100% {
+    transform: translateX(-72px);
+  }
+}
