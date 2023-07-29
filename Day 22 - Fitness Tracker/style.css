@@ -9,18 +9,163 @@
   margin-top: -200px;
   margin-left: -200px;
   border-radius: 2px;
-	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
-	overflow: hidden;
-  background: #fff;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: linear-gradient(to bottom, #28404E 0%, #1c2e38 100%);
   color: #333;
-	font-family: 'Open Sans', Helvetica, sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  color: white;
+  line-height: 0;
+  text-align: center;
 }
 
-.center {
+
+
+.text-1 {
+  font-weight: 300;
+}
+
+.text-2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.big-circle {
+  margin-top: 10px;
+  width: 100%;
+  height: 120px;
+  position: relative;
+}
+
+.big-circle svg {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: 0;
+  z-index: 0;
+  transform: translate(-50%);
+}
+
+.big-circle circle {
+  fill: none;
+  stroke-width: 10px;
+}
+
+.big-circle circle.progress {
+  stroke-linecap: round;
+  stroke-dasharray: 350;
+  stroke: #27E1AE;
+  stroke-dashoffset: 0;
+  transform: rotate(-90deg);
+  transform-origin: 60px 60px;
+  animation: big-progress 2s ease-in-out forwards;
+}
+
+@keyframes big-progress {
+  from {
+    stroke-dashoffset: 350;
+  }
+
+  to {
+    stroke-dashoffset: 60;
+  }
+}
+
+.big-circle circle.background {
+  stroke: #1B2A33;
+}
+
+.big-circle .text-1 {
+  font-weight: 600;
+  font-size: 22px;
+  z-index: 10;
+}
+
+.big-circle .text-2 {
+  font-weight: 400;
+  font-size: 14px;
+  z-index: 10;
+  color: #648192
+}
+
+.big-circle .text-circle {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
+}
+
+.small-circles {
+  position: relative;
+  margin-top: 20px;
+  align-self: center;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  width: 55%;
+  height: 80px;
+}
+
+.small-circle {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.small-circle svg {
+  width: 80px;
+  height: 80px;
+}
+
+.small-circle circle {
+  fill: none;
+  stroke-width: 6px;
+  stroke: #1B2A33
+}
+
+.small-circle-text {
+  position: absolute;
+  z-index: 500;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.small-circle-text .text-1 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.small-circle-text .text-2 {
+  font-size: 12px;
+  font-weight: 400;
+  color: #648192
+}
+
+circle.progress {
+  stroke: #5CE1EC;
+  stroke-dasharray: 235;
+  transform: rotate(-90deg);
+  transform-origin: 40px 40px;
+  stroke-linecap: round;
+}
+
+circle.progress {
+  animation: small-progress 2s ease-in-out forwards
+}
+
+@keyframes small-progress {
+  from {
+    stroke-dashoffset: 235;
+  }
+
+  to {
+    stroke-dashoffset: var(--progress);
+  }
 }

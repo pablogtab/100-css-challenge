@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +8,49 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="frame">
-        <div class="center">
-              <p>Happy coding :)</p>
+        <div class="text-container">
+            <p class="text-1">YOUR DAILY</p>
+            <p class="text-2">PROGRESS</p>
         </div>
-      </div>
-      <script src="index.js"></script>
+        <div class="big-circle">
+            <svg>
+                <circle class="background" cx="60" cy="60" r="55"></circle>
+                <circle class="progress" cx="60" cy="60" r="55"></circle>
+            </svg>
+            <div class="text-circle">
+                <p class="text-1">2758</p>
+                <p class="text-2">kcal</p>
+            </div>
+        </div>
+
+        <div class="small-circles">
+            <div class="small-circle">
+                <svg>
+                    <circle class="background" cx="40" cy="40" r="37"></circle>
+                    <circle style="--progress:75" class="progress progress-1" cx="40" cy="40" r="37"></circle>
+                </svg>
+                <div class="small-circle-text">
+                    <p class="text-1">8563</p>
+                    <p class="text-2">steps</p>
+                </div>
+            </div>
+            <div class="small-circle">
+                <svg>
+                    <circle  class="background" cx="40" cy="40" r="37"></circle>
+                    <circle style="--progress:150" class="progress progress-2" cx="40" cy="40" r="37"></circle>
+                </svg>
+                <div class="small-circle-text">
+                    <p class="text-1">6,2</p>
+                    <p class="text-2">km</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="index.js"></script>
 </body>
+
 </html>

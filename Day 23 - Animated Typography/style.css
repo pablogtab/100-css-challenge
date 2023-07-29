@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700');
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #E16D6C;
+  color: white;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+.center {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+p {
+  padding: 0px;
+  margin: 0;
+}
+
+.upper-text {
+  opacity: 0;
+  font-size: 30px;
+  font-weight: 300;
+  animation: upper-text-anim 1s ease-out forwards 2.5s
+}
+
+.lower-text {
+  opacity: 0;
+  font-size: 30px;
+  font-weight: 300;
+  animation: lower-text-anim 1s ease-out forwards 2.5s
+}
+
+.middle-text {
+  line-height: 100%;
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.brackets {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 300px;
+  height: 70px;
+}
+
+
+
+.line {
+  top: calc(50% - 2px);
+  left: 50%;
+  position: absolute;
+  background-color: white;
+  height: 4px;
+}
+
+.line.right {
+  right: 0;
+  width: 0%;
+  animation: line-right 1.5s ease forwards 1s;
+}
+
+.line.left {
+  left: 0;
+  width: 0%;
+  transform-origin: 75px;
+  animation: line-left 1.5s ease forwards 1s;
+}
+
+
+
+.bracket {
+  position: absolute;
+  width: 30px;
+  height: 70px;
+}
+
+.bracket.left {
+  left: 0;
+}
+
+.bracket.right {
+  right: 0;
+}
+
+.bline {
+  background-color: white;
+  position: absolute;
+}
+
+.bracket .bline.v1 {
+  top: 50%;
+  width: 4px;
+  height: 0px;
+  animation: vline-anim 0.5s linear forwards 2.25s
+}
+
+.bracket .bline.v2 {
+  bottom: 50%;
+  width: 4px;
+  height: 0px;
+  animation: vline-anim 0.5s linear forwards 2.25s
+}
+
+.bracket.right .bline {
+  right: 0%;
+}
+
+.bracket .bline.hu {
+  height: 4px;
+  animation: hline-anim 0.25s ease-out forwards 2.75s
+}
+
+.bracket .bline.hd {
+  bottom: 0%;
+  height: 4px;
+  animation: hline-anim 0.25s ease-out forwards 2.75s
+}
+
+
+.moment-hider {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 270px;
+  height: 50px;
+}
+
+.moment-hider .hide {
+  width: 100%;
+  position: absolute;
+  background-color: #E16D6C;
+  height: 51%;
+  animation: reveal 0.25s ease-out 2.25s forwards
+}
+
+.moment-hider .hide.down {
+  bottom: 0%;
+}
+
+@keyframes reveal {
+  from {
+    height: 51%;
+  }
+
+  to {
+    height: 0%;
+  }
+}
+
+@keyframes upper-text-anim {
+  from {
+    opacity: 0;
+    transform: translateX(-10%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes lower-text-anim {
+  from {
+    opacity: 0;
+    transform: translateX(10%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes line-right {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 50%;
+    transform: translate(0);
+  }
+
+  50.01% {
+    transform: translate(-150px);
+  }
+
+  100% {
+    transform: translate(-150px);
+    width: 0%;
+  }
+}
+
+@keyframes line-left {
+  0% {
+    width: 0%;
+    transform: rotate(180deg);
+  }
+
+  50% {
+    width: 50%;
+    transform: rotate(180deg) translate(0);
+  }
+
+  50.01% {
+    transform: rotate(180deg) translate(-150px);
+  }
+
+  100% {
+    transform: rotate(180deg) translate(-150px);
+    width: 0%;
+  }
+}
+
+@keyframes hline-anim {
+  from {
+    width: 0px;
+  }
+
+  to {
+    width: 25px;
+  }
+}
+
+@keyframes vline-anim {
+  from {
+    height: 0px;
+  }
+
+  to {
+    height: 35px;
+  }
+}
+
+.circle {
+  position: absolute;
+  background-color: white;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 0% 0%;
+  animation: circle-anim 1s ease-in-out forwards
+}
+
+@keyframes circle-anim {
+  0% {
+    transform: scale(80%) translate(-50%, -50%);
+  }
+
+  10% {
+    transform: scale(85%) translate(-50%, -50%);
+  }
+
+  100% {
+    transform: scale(0%) translate(-50%, -50%)
+  }
+}
