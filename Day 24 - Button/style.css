@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700');
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #57D895;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.button p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin: 0;
+
+}
+
+.button {
+  border: 2px solid white;
+  width: 266px;
+  height: 55px;
+  border-radius: 55px;
+  background-color: transparent;
+  transition: background-color 0.25s ease-in;
+}
+
+.button:hover {
+  background-color: #37BE77;
+  transition: background-color 0.25s ease-in;
+  cursor: pointer;
+}
+
+.button.active {
+  width: 55px;
+  background-color: transparent;
+  border: 2px solid #37BE77;
+  animation: button-collapse 2s ease-in forwards
+}
+
+.button.active p {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.1s ease-in;
+}
+
+.progress-circle {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  transform-origin: 0% 0%
+}
+
+.progress-circle circle {
+  fill: none;
+  stroke: white;
+  stroke-width: 2px;
+  stroke-dasharray: 180;
+  stroke-dashoffset: 180;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.button.active .progress-circle circle {
+  animation: progress-circle 1s ease 0.7s forwards
+}
+
+.button.active .progress-circle {
+  animation: circle-expand 0.75s ease-out 1.7s forwards
+}
+
+.check-circle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  opacity: 0;
+}
+
+
+.check-circle img {
+  width: 30px;
+}
+
+.button.active .check-circle {
+  opacity: 1;
+  transition: opacity 0.4s ease-in 1.75s;
+}
+
+
+
+@keyframes circle-expand {
+  from {
+    transform: scale(1) translate(-50%, -50%);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.75) translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
+@keyframes progress-circle {
+  0% {
+    stroke-dashoffset: 180;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes button-collapse {
+  0% {
+    width: 266px;
+    background-color: transparent;
+    border: 2px solid white;
+  }
+
+  20% {
+    width: 55px;
+    background-color: transparent;
+    border: 2px solid #37BE77;
+  }
+
+  84% {
+    background-color: transparent;
+  }
+
+  100% {
+    width: 55px;
+    background-color: transparent;
+    border: 2px solid #37BE77;
+    background-color: white;
+  }
+}

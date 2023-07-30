@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700');
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #C7D6E1;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 240px;
+  height: 150px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+p {
+  margin: 0;
+  text-align: center;
+}
+
+.corner-detail {
+  position: absolute;
+  right: -30px;
+  top: -30px;
+  width: 60px;
+  height: 60px;
+  background-color: #8391A1;
+  transform: rotate(45deg);
+}
+
+#number {
+  position: absolute;
+  font-size: 12px;
+  font-weight: 600;
+  right: 10px;
+  top: 5px;
+  color: white;
+}
+
+#title {
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #616E7D
+}
+
+#descrip {
+  margin-top: 18px;
+  margin-left: 2%;
+  margin-right: 2%;
+  font-size: 12px;
+  letter-spacing: -0.3px;
+  color: #8391A1;
+}
+
+.confirm {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  color: white;
+  font-size: 14px;
+  background-color: #3CA7FB;
+  transition: background-color 0.25s ease;
+  cursor: pointer;
+  border: 0;
+}
+
+.confirm:hover {
+
+  background-color: #2196F3;
+  transition: background-color 0.25s ease;
+}
+
+.card.active {
+  animation: card-anim 1.5s ease-in-out
+}
+
+@keyframes card-anim {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+
+  45% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0;
+  }
+
+  55% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
