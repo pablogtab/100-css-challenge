@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700');
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #4C4BA2;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+.dot-1 {
+  animation: pendulum 1s ease-in-out infinite
+}
+
+.dot-2 {
+  animation: pendulum 1.0263157s ease-in-out infinite
+}
+
+.dot-3 {
+  animation: pendulum 1.052631579s ease-in-out infinite
+}
+
+.dot-4 {
+  animation: pendulum 1.078949368s ease-in-out infinite
+}
+
+.dot-5 {
+  animation: pendulum 1.105263158s ease-in-out infinite
+}
+.dot-6 {
+  animation: pendulum 1.131578947s ease-in-out infinite
+}
+
+.dot-7 {
+  animation: pendulum 1.157894737s ease-in-out infinite
+}
+
+.dot-8 {
+  animation: pendulum 1.184210526s ease-in-out infinite
+}
+
+.dot-9 {
+  animation: pendulum 1.210526316s ease-in-out infinite
+}
+
+.dot-10 {
+  animation: pendulum 1.236842105s ease-in-out infinite
+}
+.dot-11 {
+  animation: pendulum 1.263157895s ease-in-out infinite
+}
+
+.dot-12 {
+  animation: pendulum 1.289473684s ease-in-out infinite
+}
+
+.dot-13 {
+  animation: pendulum 1.315789474s ease-in-out infinite
+}
+
+.dot-14 {
+  animation: pendulum 1.342105263s ease-in-out infinite
+}
+
+.dot-15 {
+  animation: pendulum 1.368421053s ease-in-out infinite
+}
+.dot-16 {
+  animation: pendulum 1.394736842s ease-in-out infinite
+}
+
+.dot-17 {
+  animation: pendulum 1.421052632s ease-in-out infinite
+}
+
+.dot-18{
+  animation: pendulum 1.447368421s ease-in-out infinite
+}
+
+.dot-19 {
+  animation: pendulum 1.473684211s ease-in-out infinite
+}
+
+.dot-20 {
+  animation: pendulum 1.5s ease-in-out infinite
+}
+
+@keyframes pendulum {
+
+  0%,
+  100% {
+    transform: translate(50px);
+  }
+
+  50% {
+    transform: translate(-50px);
+  }
+}

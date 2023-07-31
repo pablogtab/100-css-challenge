@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700');
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #DD3C54;
+  color: white;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bell {
+  fill: white;
+  animation: bell-anim 3s ease infinite 0.5s;
+  transform-origin: 50% 0%;
+}
+
+@keyframes bell-anim {
+
+  0%,
+  100%,
+  50% {
+    transform: rotate(0deg);
+  }
+
+  5%,
+  10%,
+  15%,
+  20%,
+  25%,
+  30%,
+  35%,
+  40%,
+  45% {
+    transform: rotate(-4deg);
+  }
+
+  7%,
+  12.5%,
+  17.5%,
+  22.5%,
+  27.5%,
+  32.5%,
+  37.5%,
+  42.5%,
+  47.5% {
+    transform: rotate(4deg);
+  }
+}
+
+
+
+
+p {
+  position: absolute;
+  font-size: 40px;
+  transform: scaleY(2);
+}
+
+.line {
+  fill: none;
+  stroke: white;
+  stroke-width: 1.5px;
+  position: absolute;
+  opacity: 0;
+}
+
+
+.line.line-1 {
+  animation: line-animation 3s ease-out infinite 0.5s
+}
+
+.line.line-2 {
+  animation: line-animation 3s ease-out infinite 1s
+}
+
+.line.line-3 {
+  animation: line-animation 3s ease-out infinite 1.5s
+}
+
+.line.line-4 {
+  animation: line-animation 3s ease-out infinite 0.5s
+}
+
+.line.line-5 {
+  animation: line-animation 3s ease-out infinite 1s
+}
+
+.line.line-6 {
+  animation: line-animation 3s ease-out infinite 1.5s
+}
+
+@keyframes line-animation {
+  0% {
+    opacity: 0;
+  }
+
+  1% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+
+  50% {
+    opacity: 0;
+    transform: translateX(60px) scale(2);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(60px) scale(2);
+  }
+}
+
+.right {
+  position: absolute;
+  top: 0;
+  right: 0
+}
+
+.left {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  transform: rotate(180deg);
+}
