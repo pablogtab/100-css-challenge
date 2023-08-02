@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700');
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #222;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.box {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  border: 1px solid #888;
+  transform-origin: 50% 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.box-1 {
+  width: 50%;
+  height: 50%;
+  animation: box-animation 2.5s alternate 30ms  ease-in-out infinite
+}
+
+.box-2 {
+  width: 47.5%;
+  height: 47.5%;
+  animation: box-animation 2.5s alternate 60ms ease-in-out infinite
+}
+
+.box-3 {
+  width: 45%;
+  height: 45%;
+  animation: box-animation 2.5s alternate 90ms ease-in-out infinite
+}
+
+.box-4 {
+  width: 42.5%;
+  height: 42.5%;
+  animation: box-animation 2.5s alternate 120ms ease-in-out infinite
+}
+
+.box-5 {
+  width: 40%;
+  height: 40%;
+  animation: box-animation 2.5s alternate 150ms ease-in-out infinite
+}
+
+.box-6 {
+  width: 37.5%;
+  height: 37.5%;
+  animation: box-animation 2.5s alternate 180ms ease-in-out infinite
+}
+
+.box-7 {
+  width: 35%;
+  height: 35%;
+  animation: box-animation 2.5s alternate 210ms ease-in-out infinite
+}
+
+.box-8 {
+  width: 32.5%;
+  height: 32.5%;
+  animation: box-animation 2.5s alternate 240ms ease-in-out infinite
+}
+
+.box-9 {
+  width: 30%;
+  height: 30%;
+  animation: box-animation 2.5s alternate 270ms ease-in-out infinite
+}
+
+.box-10 {
+  width: 27.5%;
+  height: 27.5%;
+  animation: box-animation 2.5s alternate 300ms ease-in-out infinite
+}
+
+.box-11 {
+  width: 25%;
+  height: 25%;
+  animation: box-animation 2.5s alternate 330ms ease-in-out infinite
+}
+
+.box-12 {
+  width: 22.5%;
+  height: 22.5%;
+  animation: box-animation 2.5s alternate 360ms ease-in-out infinite
+}
+
+.box-13 {
+  width: 20%;
+  height: 20%;
+  animation: box-animation 2.5s alternate 390ms ease-in-out infinite
+}
+
+.box-14 {
+  width: 17.5%;
+  height: 17.5%;
+  animation: box-animation 2.5s alternate 420ms ease-in-out infinite
+}
+
+.box-15 {
+  width: 15%;
+  height: 15%;
+  animation: box-animation 2.5s alternate 450ms ease-in-out infinite
+}
+
+.box-16 {
+  width: 12.5%;
+  height: 12.5%;
+  animation: box-animation 2.5s alternate 480ms ease-in-out infinite
+}
+
+.box-17 {
+  width: 10%;
+  height: 10%;
+  animation: box-animation 2.5s alternate 510ms ease-in-out infinite
+}
+
+.box-18 {
+  width: 7.5%;
+  height: 7.5%;
+  animation: box-animation 2.5s alternate 540ms ease-in-out infinite
+}
+
+.box-19 {
+  width: 5%;
+  height: 5%;
+  animation: box-animation 2.5s alternate 570ms ease-in-out infinite
+}
+
+.box-20 {
+  width: 2.5%;
+  height: 2.5%;
+  animation: box-animation 2.5s alternate 600ms ease-in-out infinite
+}
+
+
+
+
+
+
+
+
+
+@keyframes box-animation {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

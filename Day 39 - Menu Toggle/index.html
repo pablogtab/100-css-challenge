@@ -11,14 +11,16 @@
 
 <body>
     <div class="frame">
-        <div class="counter">
-            <div class="substract" onclick="substract()">
-                <div class="line"></div>
-            </div >
-            <span id="count" class="count">0</span>
-            <div class="add" onclick="add()">
-                <div class="line"></div>
+        <div class="center">
+            <div id="menu" class="menu" onclick="menu()">
+                <div class="line line-1"></div>
                 <div class="line line-2"></div>
+            </div>
+            <div id="options" class="center options">
+                <p onclick="menu()" class="option">HOME</p>
+                <p onclick="menu()" class="option">WORK</p>
+                <p onclick="menu()" class="option">LIFE</p>
+                <p onclick="menu()" class="option">SPIRIT</p>
             </div>
         </div>
         <script src="index.js"></script>

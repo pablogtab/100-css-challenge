@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700');
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #2B3642;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  width: 80%;
+  height: 60%;
+  background-color: white;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.4);
+}
+
+.tabs {
+  height: 40px;
+  width: 100%;
+  background-color: #3D4D5E;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.align-left {
+  display: flex;
+  flex-direction: row;
+}
+
+.tab {
+  cursor: pointer;
+  position: relative;
+  height: 40px;
+  width: 40px;
+  background-color: transparent;
+  transition: 0.25s background-color ease-in;
+}
+
+.tab.selected {
+  background-color: #5DA2ED;
+  transition: 0.25s background-color ease-in;
+}
+
+
+.icon {
+  color: #8398AD;
+}
+
+.tab.selected .icon {
+  color: white;
+}
+
+.tab:hover .icon {
+  color: white;
+}
+
+
+.content {
+  position: absolute;
+  width: 90%;
+  margin: 5%;
+  height: calc(90% - 44px);
+  opacity: 0;
+  transform: translateY(5%);
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.content p {
+  margin-top: 5px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #415868;
+  margin: 0;
+  padding: 0;
+}
+
+.content div {
+  width: 60%;
+  height: 4px;
+  background-color: #EEE;
+  margin-top: 8px;
+}
+
+.content.selected {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: opacity 0.4s ease-in 0.4s, transform 0.4s ease-in-out 0.4s;
+}

@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700');
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #9B59B6;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.purple {
+  transform-origin: 0% 0%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.white svg {
+  fill: white;
+}
+
+.purple svg {
+  fill: #9B59B6;
+}
+
+.white {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transform-origin: 0% 0%;
+}
+
+.white.inactive {
+  transform: scale(10) translate(-50%, -50%);
+  animation: 0.8s white-in ease-out forwards 0.3s
+}
+
+.white.active {
+  transform: scale(1) translate(-50%, -50%);
+  animation: 1s white-out ease-out forwards
+}
+
+.purple.inactive {
+  transform: scale(1) translate(-50%, -50%);
+  animation: 1s purple-out ease forwards
+}
+
+.purple.active {
+  transform: scale(0) translate(-50%, -50%);
+  animation: 1s purple-in ease-out 0.2s forwards
+}
+
+@keyframes white-out {
+  from {
+    transform: scale(1) translate(-50%, -50%);
+  }
+
+  to {
+    transform: scale(10) translate(-50%, -50%);
+  }
+}
+
+@keyframes white-in {
+  from {
+    transform: scale(10) translate(-50%, -50%);
+  }
+
+  to {
+    transform: scale(1) translate(-50%, -50%);
+  }
+}
+
+@keyframes purple-out {
+  from {
+    transform: scale(1) translate(-50%, -50%);
+  }
+
+  to {
+    transform: scale(0) translate(-50%, -50%);
+  }
+}
+
+@keyframes purple-in {
+  from {
+    transform: scale(0) translate(-50%, -50%);
+  }
+
+  to {
+    transform: scale(1) translate(-50%, -50%);
+  }
+}

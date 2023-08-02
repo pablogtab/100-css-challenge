@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700');
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #5CA4EA;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.button {
+  width: 175px;
+  height: 60px;
+  border: 1px solid #91C9FF;
+}
+
+svg {
+  transform: rotateY(180deg);
+  width: 176px;
+  height: 61px;
+}
+
+svg polyline {
+  position: absolute;
+  fill: none;
+  stroke: white;
+  stroke-width: 2px;
+  stroke-dasharray: 50, 500;
+  stroke-dashoffset: 50;
+}
+
+.button polyline {
+  transition: stroke-dashoffset 0.75s ease-in
+}
+
+
+
+.button:hover polyline {
+  stroke-dashoffset: 600;
+  transition: stroke-dashoffset 0.75s ease-in
+}
+
+.button:hover {
+  background-color: #4F95DA;
+  transition: background-color 0.25s ease-in
+}
+
+p {
+  top:2px;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  color: white;
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-size: 18px;
+}

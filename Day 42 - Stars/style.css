@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700');
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: linear-gradient(to bottom, #1d4253 0%, #6bb5c4 100%);
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.background {
+  z-index: 0;
+}
+
+.cuadrado {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  clip-path: circle(30% at 50% 50%);
+}
+
+svg path {
+  fill: white
+}
+
+.star {
+  position: absolute;
+  top: var(--offset-top);
+  left: var(--offset-left);
+  width: 1px;
+  height: 1px;
+  background-color: white;
+  animation: star-flick var(--flicker-time) linear alternate infinite;
+  border-radius: 50%;
+}
+
+@keyframes star-flick {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0.3;
+  }
+}
+
+.shooting-star {
+  position: absolute;
+  top: var(--offset-top);
+  left: 50%;
+  width: 120px;
+  height: 2px;
+  transform: rotate(20deg) translate(-400px);
+  border-radius: 2px;
+  background: linear-gradient(to right, transparent 0%, white 100%);
+  animation: shooting-star 10s infinite var(--shooting-delay)
+}
+
+
+
+@keyframes shooting-star {
+  0% {
+    transform: rotate(20deg) translate(-400px)
+  }
+
+  20% {
+    transform: rotate(20deg) translate(300px)
+  }
+
+  100% {
+    transform: rotate(20deg) translate(300px);
+  }
+}

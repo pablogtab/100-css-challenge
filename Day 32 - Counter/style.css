@@ -35,7 +35,7 @@
   align-items: center;
 }
 
-.minus {
+.substract {
   cursor: pointer;
   position: relative;
   width: 30px;
@@ -46,7 +46,7 @@
   transition: background-color 0.25s ease-out;
 }
 
-.minus:hover {
+.substract:hover {
   background-color: #E26E6E;
   transition: background-color 0.25s ease-out;
 }
@@ -56,7 +56,7 @@
   transition: background-color 0.25s ease-out;
 }
 
-.minus:hover .line {
+.substract:hover .line {
   background-color: white;
   transition: background-color 0.25s ease-out;
 }
@@ -66,7 +66,7 @@
   transition: background-color 0.25s ease-out;
 }
 
-.minus .line {
+.substract .line {
   background-color: #E26E6E;
 }
 
@@ -83,7 +83,6 @@
   margin-right: 5px;
 }
 
-
 .line {
   height: 1.5px;
   width: 16px;
@@ -96,4 +95,64 @@
 .line-2 {
   transform: rotate(90deg) translate(-50%, -50%);
   transform-origin: 0% 0%;
+}
+
+.count {
+  color: #6A85A0;
+  font-size: 20px;
+  font-weight: 600;
+  transform: scale(1);
+  opacity: 1;
+}
+
+.adding {
+  animation: adding 0.3s ease-in;
+}
+
+.substracting {
+  animation: substracting 0.3s ease-in;
+}
+
+@keyframes adding {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+
+  50.01% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes substracting {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  50.01% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
