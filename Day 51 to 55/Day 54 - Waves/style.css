@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700');
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #263A4D;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+
+
+.wave {
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  left: -50px;
+  width: 500px;
+}
+
+.wave-back{
+  animation:  wave-back 5s ease-in-out infinite alternate
+}
+
+@keyframes wave-back {
+  from{
+    transform: translateX(-10%);
+  }
+  to{
+    transform: translateX(5%);
+  }
+}
+
+.wave-middle{
+  animation:  wave-middle 4s ease-in-out infinite alternate
+}
+
+@keyframes wave-middle {
+  from{
+    transform: translateX(5%);
+  }
+  to{
+    transform: translateX(-5%);
+  }
+}
+
+.wave-front{
+  animation:  wave-front 3s ease-in-out infinite alternate-reverse
+}
+
+@keyframes wave-front {
+  from{
+    transform: translateX(5%);
+  }
+  to{
+    transform: translateX(-5%);
+  }
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: red;
+  top: 0;
+  transform: translateY(-50%);
+}
+
+
+
+
+
+.wave.wave-back {
+  background-color: #406384;
+  height: 175px;
+}
+.wave-back .odd {
+  background-color: #406384;
+}
+.wave-back .even {
+  background-color: #263A4D;
+}
+
+.wave.wave-middle {
+  background-color: #5D90BF;
+  height: 115px;
+}
+.wave-middle .odd {
+  background-color: #406384;
+}
+.wave-middle .even {
+  background-color: #5D90BF;
+}
+
+
+.wave.wave-front {
+  background-color: #7EB3E6;
+  height: 55px;
+}
+.wave-front .odd {
+  background-color: #5D90BF;
+}
+.wave-front .even {
+  background-color: #7EB3E6;
+}
